@@ -547,8 +547,9 @@ async function connect() {
   console.log(`Connected Wallet ${account}`);
   console.log(contract);
   const balance = await contract.balanceOf(account);
-  console.log(balance.toString() / 10 ** 18); // Check the balance of the account
-
+  console.log(balance.toString() / 10 ** 18); 
+  
+  // Check the balance of the account
   if (balance.toString() / 10 ** 18 > 0) {
     document.getElementById("balance").innerHTML = "You are eligible";
   } else {
